@@ -1,3 +1,7 @@
+//Important reading: https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
+
+
+
 var database = firebase.database()
 
 //database object reference
@@ -27,7 +31,7 @@ uid: uid
 }
 
 
-//save data to the database and catch errors
+//push data to the database and catch errors
 ref.push(data, function(error) {
   if (error) {
     console.log("Data could not be saved." + error);
@@ -35,3 +39,31 @@ ref.push(data, function(error) {
     console.log("Data saved successfully.");
     
   }
+  
+  
+  
+  //other code samples for creating references and child objects
+  /*
+  function addStore(){
+  var rootRef = firebase.database().ref();
+  var storesRef = rootRef.child('app/cars');
+  var newStoreRef = storesRef.push();
+  newStoreRef.set({
+    name: "Cars",
+    "pageId": "23",
+    "storeURL": "/app/cars/gallery"
+  });
+}
+ 
+//var newCarRef = newStoreRef.child('gallery').push();
+newCarRef.set({
+  title: 'Mercedes',
+  img: 'http://'
+});
+
+*/
+  
+  
+  
+  
+  
