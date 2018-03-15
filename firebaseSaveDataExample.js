@@ -1,5 +1,6 @@
 var database = firebase.database()
 
+//database object reference
 var ref = database.ref('groups/');
 
 //get data from current logged in user
@@ -25,20 +26,12 @@ uid: uid
 
 }
 
-//ref.push(data);
 
-//check data-onsuccess
-
+//save data to the database and catch errors
 ref.push(data, function(error) {
   if (error) {
     console.log("Data could not be saved." + error);
   } else {
     console.log("Data saved successfully.");
-    //document.getElementById('groupNameStatus').textContent = 'Set successfully!';
-    //document.getElementById('setGroupNameBtn').disabled = true;
-    //document.getElementById('readyToPlayBtn').disabled = false;
-
-
-    //lets take the user into the dashboard
-    //changeAppPage("dashboard");
+    
   }
