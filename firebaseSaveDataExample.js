@@ -44,22 +44,28 @@ ref.push(data, function(error) {
   
   //other code samples for creating references and child objects
   /*
-  function addStore(){
+   function addStore(){
   var rootRef = firebase.database().ref();
   var storesRef = rootRef.child('app/cars');
   var newStoreRef = storesRef.push();
-  newStoreRef.set({
+
+
+newStoreRef.set({
     name: "Cars",
     "pageId": "23",
     "storeURL": "/app/cars/gallery"
   });
-}
- 
-//var newCarRef = newStoreRef.child('gallery').push();
-newCarRef.set({
-  title: 'Mercedes',
-  img: 'http://'
-});
+
+  var newCarRef = newStoreRef.child('gallery').push();
+  newCarRef.set({
+    title: 'Mercedes',
+    img: 'http://'
+  });
+
+
+}//close function
+
+addStore();
 
 */
   
